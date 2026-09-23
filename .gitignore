@@ -77,9 +77,10 @@ test/*
 
 # Uploads and runtime data
 storage/uploads/
-storage/objects/
-storage/pgdata/
 storage/dispatcher.log
+# 2026-09-23 按林泽羽要求：进度与缓存入库（fork 排查用）
+# storage/objects/ 与 storage/pgdata/ 不再忽略
+# 注意：密钥类文件（.env / *.encrypted / .db-password）仍然必须保持忽略
 
 # Pipeline run output (contains verbatim excerpts of source novels — never commit)
 output/
@@ -96,3 +97,4 @@ output/
 .mimosa/
 
 scripts/_tmp-*
+storage/pgdata/postmaster.pid
